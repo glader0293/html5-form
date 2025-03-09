@@ -1,0 +1,19 @@
+form.was-validated:has(:invalid) .alert-danger {
+    display: block !important;
+}
+
+.font-size{
+    font-size: 14px;
+}
+
+.color-text{
+    color: rgb(114, 112, 112)
+}
+
+.color-black{
+    color: rgb(0, 0, 0)
+}
+
+.small-radio .form-check-input {
+    transform: scale(0.8); 
+}
