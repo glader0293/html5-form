@@ -24,10 +24,6 @@
                 <div class="row g-4 m-0 mt-3">
 
                     <!--ALERT-->
-                    <!-- <div class="col-md-12 alert alert-danger d-none d-flex justify-content-center align-items-center px-3" id="errorAlert">
-                        <span>Some fields are missing.</span>
-                    </div> -->
-                    
                     <div class="col-md-12 px-2">
                         <div class="alert alert-danger d-none d-flex justify-content-center align-items-center" id="errorAlert">
                             <span>Some fields are missing.</span>
@@ -48,12 +44,14 @@
                     </div>
                     <div class="col-md-4">
                         <label for="inputAmount" class="form-label">Amount</label>
-                        <div class="d-flex justify-content-center align-items-center gap-1">
-                            <i class="fa-solid fa-dollar-sign" style="color: #000000;"></i>
-                            <input type="number" class="form-control" id="amount" placeholder="Amount" required>
+                        <div class="input-group d-flex">
+                            
+                            <span class="input-group-text">
+                                <i class="fa-solid fa-dollar-sign" style="color: #000000;"></i>
+                            </span>
+                            <input type="number" class="form-control" id="amount" placeholder="Amount" required> 
+                            <div class="invalid-feedback">Please enter a valid amount</div>
                         </div>
-                        
-                        <div class="invalid-feedback">Please enter a valid amount</div>
                     </div>
 
                 </div>
@@ -62,11 +60,13 @@
                 <div class="row m-0 mt-2 g-4">
                     <div class="col-md-6">
                         <label for="inputFirstName" class="form-label">First Name</label>
-                        <input type="text" class="form-control" id="firstName">
+                        <input type="text" class="form-control" id="firstName" required>
+                        <div class="invalid-feedback">Please enter a valid name.</div>
                     </div>
                     <div class="col-md-6">
                         <label for="inputLastName" class="form-label">Last Name</label>
-                        <input type="text" class="form-control" id="lastName">
+                        <input type="text" class="form-control" id="lastName" required>
+                        <div class="invalid-feedback">Please enter a valid last name.</div>
                     </div>
                 </div>
                 
@@ -74,12 +74,14 @@
                 <div class="row m-0 g-4">
                     <div class="col-md-6">
                         <label for="inputCity" class="form-label">City</label>
-                        <input type="text" class="form-control" id="inputCity">
+                        <input type="text" class="form-control" id="inputCity" required>
+                        <div class="invalid-feedback">Please enter a valid city.</div>
                     </div>
                     <div class="col-md-4">
                         <label for="inputState" class="form-label">State</label>
-                        <select id="inputState" class="form-select pe-5">
-                            <option selected>Pick a state</option>
+                        <div class="invalid-feedback">Please enter a valid state.</div>
+                        <select id="inputState" class="form-select " required>
+                            <option value="" selected disabled>Pick a state</option>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
                             <option value="AZ">Arizona</option>
@@ -132,13 +134,14 @@
                             <option value="WY">Wyoming</option>
 
                     </select>
-                
+                    <div class="invalid-feedback">Please select a state.</div>
 
 
                     </div>
                     <div class="col-md-2">
                         <label for="postalCode" class="form-label">Postal Code</label>
-                        <input type="number" class="form-control" id="postalCode">
+                        <input type="number" class="form-control" id="postalCode" required>
+                        <div class="invalid-feedback">Please enter a valid postal code.</div>
                     </div>
                 </div>
                 
@@ -188,7 +191,7 @@
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12 d-flex flex-column mb-3">
                         <label for="floatingTextarea2" class="form-label">Message</label>
-                        <textarea class="form-control"  id="floatingTextarea2" style="height: 100px"></textarea>
+                        <textarea class="form-control"  id="floatingTextarea2" style="height: 100px" required></textarea>
                         <span class="font-size color-text">Add any notes here.</span>
                     </div>
                     
